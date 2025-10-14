@@ -1,0 +1,21 @@
+{
+    "name": "OS",
+    "image": "gcc:latest",
+    
+    "workspaceFolder": "/workspace",
+    
+    "mounts": [
+        "source=${localWorkspaceFolder},target=/workspace,type=bind"
+    ],
+    
+    "postCreateCommand": "apt-get update && apt-get install -y strace git",
+    
+    "customizations": {
+        "vscode": {
+            "extensions": [
+                "ms-vscode.cpptools",
+                "ms-vscode.makefile-tools"
+            ]
+        }
+    }
+}
