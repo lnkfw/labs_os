@@ -12,7 +12,7 @@ int main() {
     
     while ((bytes_read = read(STDIN_FILENO, buffer, BUFFER_SIZE)) > 0) {
         for (int i = 0; i < bytes_read; i++) 
-            if (isspace(buffer[i])) buffer[i] = '_';
+            if (isspace(buffer[i]) && buffer[i] != '\n') buffer[i] = '_';
         write(STDOUT_FILENO, buffer, bytes_read);
     }
     

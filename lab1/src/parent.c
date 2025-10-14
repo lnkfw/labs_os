@@ -9,7 +9,7 @@
 int main() {
     int pipe1[2], pipe2[2], pipe3[2];
     
-    printf("Parent процесс, PID: %d)\n", getpid());
+    printf("Parent процесс, PID: %d\n", getpid());
     
     if (pipe(pipe1) == -1 || pipe(pipe2) == -1 || pipe(pipe3) == -1) {
         perror("pipe failed");
